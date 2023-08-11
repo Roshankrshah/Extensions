@@ -250,29 +250,28 @@ const generateHTML = (pageName) => {
      `;
 };
 
+const generatePage = (site)=>{
+    document.head.innerHTML = generateSTYLES();
+    document.body.innerHTML = generateHTML(site);
+}
+
 switch (window.location.hostname) {
     case "www.youtube.com":
-        document.head.innerHTML = generateSTYLES();
-        document.body.innerHTML = generateHTML("YOUTUBE");
+        generatePage("YOUTUBE");
         break;
     case "www.facebook.com":
-        document.head.innerHTML = generateSTYLES();
-        document.body.innerHTML = generateHTML("FACEBOOK");
+        generatePage("FACEBOOK");
         break;
     case "www.netflix.com":
-        document.head.innerHTML = generateSTYLES();
-        document.body.innerHTML = generateHTML("NETFLIX");
+        generatePage("NETFLIX");
         break;
-    case "www.Twitter.com":
-        document.head.innerHTML = generateSTYLES();
-        document.body.innerHTML = generateHTML("TWITTER");
+    case "www.twitter.com":
+        generatePage("TWITTER");
         break;
     case "discord.com":
-        document.head.innerHTML = generateSTYLES();
-        document.body.innerHTML = generateHTML("DISCORD");
+        generatePage("DISCORD");
         break;
     case "www.spotify.com":
-        document.head.innerHTML = generateSTYLES();
-        document.body.innerHTML = generateHTML("SPOTIFY");
+        generatePage("SPOTIFY");
         break;
 }
