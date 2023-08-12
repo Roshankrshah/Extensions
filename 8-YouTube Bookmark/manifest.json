@@ -10,9 +10,22 @@
     "background": {
         "service_worker": "background.js"
     },
-    "icons":{
+    "icons": {
         "16": "assets/ext-icon.png"
     },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/bookmark.png",
+                "assets/play.png",
+                "assets/delete.png",
+                "assets/save.png"
+            ],
+            "matches": [
+                "https://*.youtube.com/*"
+            ]
+        }
+    ],
     "content_scripts": [
         {
             "matches": [
