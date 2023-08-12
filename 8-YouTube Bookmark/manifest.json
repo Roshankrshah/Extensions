@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "version": "0.1.0",
+    "name": "My YT Bookmarks",
+    "description": "Saving timestamps in YT videos",
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons":{
+        "16": "assets/ext-icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.youtube.com/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
