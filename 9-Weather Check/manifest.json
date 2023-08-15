@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Weather Check",
+    "description": "Show Weather report in current location",
+    "version": "1.0.0",
+    "action":{
+        "default_popup": "./popup.html"
+    },
+    "permissions": ["activeTab","geolocation"]
+}
