@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     btn.addEventListener('click',()=>{
 
         chrome.storage.local.set({username: input.value});
-        chrome.storage.local.set({isOnboardingDone:true});
+        chrome.storage.local.set({isOnboardingDone:true},()=>{
+            window.close();
+        });
     })
 })
